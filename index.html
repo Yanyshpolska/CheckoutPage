@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" type="text/css" href="../style/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header container">
+        <a href="#" class="headerButton goBackButton">Go back</a>
+        <a href="#" class="headerLogo"
+          ><img src="..//img/logo.jpg" alt="Logo" width="100"
+        /></a>
+        <a href="#" class="headerButton signInButton">Sign in</a>
+      </header>
+      <main class="container">
+        <form action="" class="mainForm">
+          <header class="mainHeader">
+            <section class="mainHeaderOrder">
+              <div class="orderSummary">
+                <h3 class="mainHeaderOrder__title">Your order</h3>
+                <dl class="summary">
+                  <div>
+                    <dt>Items</dt>
+                    <dd>2&nbsp;documents</dd>
+                  </div>
+                  <div>
+                    <dt>Details</dt>
+                    <dd>2&nbsp;languages</dd>
+                  </div>
+                  <div>
+                    <dt>Price</dt>
+                    <dd>$&nbsp;696.06</dd>
+                  </div>
+                  <div>
+                    <dt>Delivery</dt>
+                    <dd>48&nbsp;hours*</dd>
+                  </div>
+                </dl>
+              </div>
+              <div class="orderButtons">
+                <button type="submit" class="formButton greenButton">
+                  Place order
+                </button>
+                <button type="button" class="formButton">Print a quote</button>
+              </div>
+            </section>
+            <section class="mainHeaderHelp">
+              <h3 class="mainHeaderHelp__title">Help Center</h3>
+              <p class="mainHeaderHelp__content">
+                If you need assistance while placing your order, contact one of
+                our beloved Project Manager by phone or email.
+              </p>
+              <address class="mainHeaderHelp__contacts">
+                <a href="">+971(0)555 555</a> <a href="">help@qtest.com</a>
+              </address>
+            </section>
+          </header>
+          <fieldset class="documentType">
+            <legend>
+              <h1 class="documentType__title">
+                Select what you want to translate
+              </h1>
+            </legend>
+
+            <input
+              id="documentTypeWebsite"
+              name="document-type"
+              type="radio"
+              class="visually-hidden"
+            />
+            <label for="documentTypeWebsite" class="radio documentTypeRadio">
+              <img src="../img/website.png" alt="" width="75" />
+              <span>Website</span>
+            </label>
+
+            <input
+              checked
+              id="documentTypeDocuments"
+              type="radio"
+              name="document-type"
+              class="visually-hidden"
+            />
+            <label for="documentTypeDocuments" class="radio documentTypeRadio">
+              <img src="../img/documents.png" alt="" width="75" />
+              <span>Documents</span>
+            </label>
+
+            <input
+              name="document-type"
+              id="documentTypeSocial"
+              type="radio"
+              class="visually-hidden"
+            />
+            <label for="documentTypeSocial" class="radio documentTypeRadio">
+              <img src="../img/social.png" alt="" width="75" />
+              <span>Social Account</span>
+            </label>
+          </fieldset>
+          <section id="mainFormUploadDocument">
+            <h2 class="mainFormSectionHeader">
+              Upload your documents
+              <small>(Doc, Docx, Text, PDF, Markdown)</small>
+            </h2>
+            <label for="Upload-file" class="uploadFile button"
+              >Upload a new file</label
+            >
+            <input
+              id="Upload-file"
+              type="file"
+              multiple
+              accept=".png, .jpg, .jpeg"
+            />
+            <table>
+              <thead>
+                <tr>
+                  <th class="tableFirstColumn">File name</th>
+                  <th class="tableSecondColumn">File size</th>
+                  <th>Number of words</th>
+                  <th>Remove</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="tableFileName">business_operations.docx</td>
+                  <td>78kb</td>
+                  <td>842</td>
+                  <td>
+                    <img src="..//img/remove.png" alt="Remove" width="13" />
+                  </td>
+                </tr>
+                <tr>
+                  <td class="tableFileName">business_financial.docx</td>
+                  <td>26kb</td>
+                  <td>2,326</td>
+                  <td>
+                    <img src="..//img/remove.png" alt="Remove" width="13" />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section id="mainFormUploadWebsite">
+            <h2 class="mainFormSectionHeader">Upload your link</h2>
+            <input id="Upload-link" type="text" />
+          </section>
+          <section>
+            <h2 class="mainFormSectionHeader">
+              Choose your languages pairings
+            </h2>
+            <div class="select__wrapper">
+              <select
+                name="languange"
+                id="select"
+                class="select__item"
+                required
+              >
+                <option value="">Language</option>
+                <option value="english">English</option>
+                <option value="arabic">Arabic</option>
+                <option value="kurdish">Kurdish</option>
+              </select>
+            </div>
+          </section>
+          <section>
+            <h2 class="mainFormSectionHeader">Select your desired tone</h2>
+          </section>
+          <section>
+            <h2 class="mainFormSectionHeader">
+              Tell us how urgent this job is
+            </h2>
+          </section>
+          <section>
+            <h2 class="mainFormSectionHeader">
+              Sing up and choose a payment method
+            </h2>
+          </section>
+        </form>
+      </main>
+      <footer class="footer"></footer>
+    </div>
+    <!-- <script src="../js/script.js"></script> -->
+
+    <!-- <nav class="breadcrumbs">
+      <ol>
+        <li><a href="/home/">Головна</a></li>
+        <li>&rarr;</li>
+        <li><a href="/home/cluster/">Кластер</a></li>
+        <li>&rarr;</li>
+        <li>Сервіс</li>
+      </ol>
+    </nav>
+
+    <style>
+      .breadcrumbs ol {
+        display: flex;
+        list-style: none;
+        align-items: center;
+      }
+      .breadcrumbs li {
+        margin: 0 5px 0 0;
+      }
+    </style>
+
+    <nav class="breadcrumbs">
+      <ol>
+        <li><a href="/home/">Головна</a></li>
+        <li><a href="/home/cluster/">Кластер</a></li>
+        <li>Сервіс</li>
+      </ol>
+    </nav> -->
+
+    <!-- <style>
+      .breadcrumbs ol {
+        display: flex;
+        list-style: none;
+        align-items: center;
+      }
+      .breadcrumbs li:not(:last-child):after {
+        content: "→";
+        margin: 0 5px;
+        pointer-events: none;
+      }
+    </style> -->
+    <!-- <details>
+      <summary>Cокира</summary>
+      Вони обоє знали, що то бродить по лісі невидима сокира, гупа об дерева і
+      хека з втомлених грудей. Ляк проганяв їх звідти в долину, де потік плив
+      спокійніше. Вони робили собі курбало у потоці, глибоке місце, і,
+      роздягтись, бовтались в нім, як двоє лісних звірят, що не знають, що таке
+      сором. Сонце спочивало на їх яснім волоссі і било в очі, а льодова вода
+      потоку щипала тіло.
+    </details> -->
+  </body>
+</html>
