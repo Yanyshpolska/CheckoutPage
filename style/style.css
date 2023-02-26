@@ -271,35 +271,34 @@ body {
 }
 
 /*******************************************Slect you want to translate  */
-.documentType {
-  border: 0;
-  margin-inline: auto;
+
+.documentType_header {
+  margin: 0px -110px 0px -130px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 0 -1.5rem 5.3rem;
-}
-.documentType > legend {
-  margin: auto;
 }
 .documentType__title {
+  margin: auto;
   text-transform: uppercase;
   font-size: 20px;
   font-weight: 400;
   letter-spacing: 0.16rem;
   color: var(--mainFormText);
   padding: 6.5rem 0.5rem 0.7rem 0.5rem;
-  margin-left: -1.2rem;
   margin-bottom: 3rem;
   position: relative;
   border-bottom: 1px solid var(--mainFormBorder);
 }
 
+.selectDocType {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 -1.5rem 5.3rem;
+}
 .documentTypeRadio {
   flex-grow: 1;
   flex-shrink: 1;
-  flex-basis: 28%;
-  /* flex-basis: calc((38rem - 100%) * 999); */
+  flex-basis: calc((38rem - 100%) * 999);
   max-width: 17.5rem;
   height: 12.5rem;
   display: inline-flex;
@@ -312,8 +311,7 @@ body {
 
 .radio {
   background-color: var(--mainFormButton);
-  /* border: solid 1px #d2d2d2; */
-  border: solid 1px var(--mainFormBorder);
+  border: solid 4px var(--mainFormBorder);
   border-radius: 5px;
 }
 
@@ -349,12 +347,22 @@ input[type="radio"]:checked + .radio::before {
   background-size: cover;
 }
 
-.documentType > label > img {
+.documentType > div > label > img {
   width: 6rem;
   margin-bottom: 1rem;
 }
-.documentType > label > span {
+.documentType > div > label > span {
   color: var(--mainFormText);
+}
+
+@media only screen and (max-width: 600px) {
+  .documentType__title {
+    padding-top: 3rem;
+    margin-bottom: 2rem;
+  }
+  .selectDocType {
+    margin: 0 -1.5rem 2rem;
+  }
 }
 /***********************************Upload document  */
 #mainFormUploadDocument {

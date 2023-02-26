@@ -65,57 +65,58 @@
                 our beloved Project Manager by phone or email.
               </p>
               <address class="mainHeaderHelp__contacts">
-                <a href="tel:9710555555" alt="Call number 971(0)555 555"
-                  >+971(0)555&nbsp;555</a
-                >
-                <a href="mailto:help@qtest.com" alt="Mail to help@qtest.com"
-                  >help@qtest.com</a
-                >
+                <a href="tel:9710555555">+971(0)555&nbsp;555</a>
+                <a href="mailto:help@qtest.com">help@qtest.com</a>
               </address>
             </section>
           </header>
-          <fieldset class="documentType">
-            <legend>
+          <section class="documentType">
+            <div class="documentType_header">
               <h1 class="documentType__title">
                 Select what you want to translate
               </h1>
-            </legend>
+            </div>
+            <div class="selectDocType">
+              <input
+                id="documentTypeWebsite"
+                name="document-type"
+                type="radio"
+                class="visually-hidden"
+              />
+              <label for="documentTypeWebsite" class="radio documentTypeRadio">
+                <img src="./img/website.png" alt="" width="75" />
+                <span>Website</span>
+              </label>
 
-            <input
-              id="documentTypeWebsite"
-              name="document-type"
-              type="radio"
-              class="visually-hidden"
-            />
-            <label for="documentTypeWebsite" class="radio documentTypeRadio">
-              <img src="./img/website.png" alt="" width="75" />
-              <span>Website</span>
-            </label>
+              <input
+                checked
+                id="documentTypeDocuments"
+                type="radio"
+                name="document-type"
+                class="visually-hidden"
+              />
+              <label
+                for="documentTypeDocuments"
+                class="radio documentTypeRadio"
+              >
+                <img src="./img/documents.png" alt="" width="75" />
+                <span>Documents</span>
+              </label>
 
-            <input
-              checked
-              id="documentTypeDocuments"
-              type="radio"
-              name="document-type"
-              class="visually-hidden"
-            />
-            <label for="documentTypeDocuments" class="radio documentTypeRadio">
-              <img src="./img/documents.png" alt="" width="75" />
-              <span>Documents</span>
-            </label>
+              <input
+                name="document-type"
+                id="documentTypeSocial"
+                type="radio"
+                class="visually-hidden"
+              />
+              <label for="documentTypeSocial" class="radio documentTypeRadio">
+                <img src="./img/social.png" alt="" width="75" />
+                <span>Social Account</span>
+              </label>
+            </div>
+          </section>
 
-            <input
-              name="document-type"
-              id="documentTypeSocial"
-              type="radio"
-              class="visually-hidden"
-            />
-            <label for="documentTypeSocial" class="radio documentTypeRadio">
-              <img src="./img/social.png" alt="" width="75" />
-              <span>Social Account</span>
-            </label>
-          </fieldset>
-          <section id="mainFormUploadDocument">
+          <!-- <section id="mainFormUploadDocument">
             <h2 class="mainFormSectionHeader">
               Upload your documents
               <small>(Doc, Docx, Text, PDF, Markdown)</small>
@@ -128,10 +129,9 @@
               type="file"
               multiple
               accept=".png, .jpg, .jpeg"
-            /> -->
+            />
 
-
-            <!-- <table>
+            <table>
               <thead>
                 <tr>
                   <th class="tableFirstColumn">File name</th>
@@ -158,10 +158,10 @@
                   </td>
                 </tr>
               </tbody>
-            </table> -->
+            </table>
           </section>
 
-          <!-- <section id="mainFormUploadWebsite">
+          <section id="mainFormUploadWebsite">
             <h2 class="mainFormSectionHeader">Upload your link</h2>
             <input id="Upload-link" type="text" />
           </section>
