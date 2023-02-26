@@ -1,5 +1,5 @@
 :root {
-  --background: #edeef5;
+  --bodyBackground: #edeef5;
   --headerButtonBorder: #cdcfe1;
   --headerButtonText: #a6abc5;
   --mainFormBorder: #ccd0df;
@@ -20,7 +20,7 @@
 } */
 
 body {
-  background-color: var(--background);
+  background-color: var(--bodyBackground);
 }
 .wrapper {
   padding: 0 2vw;
@@ -32,12 +32,16 @@ body {
 }
 /******************************************* Header */
 .header {
-  height: 230px;
+  height: 14rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+.headerLogo {
+  margin: 1rem;
+}
 .headerButton {
+  width: 10.5rem;
   padding: 18px 40px 18px 35px;
   text-transform: uppercase;
   text-decoration: none;
@@ -52,17 +56,19 @@ body {
 }
 .headerButton:hover {
   border-color: var(--headerButtonText);
+  border-width: 2px;
 }
 .headerLogo:hover {
-  outline: 1px solid var(--headerButtonText);
+  outline: 2px solid var(--headerButtonText);
   border-radius: 5px;
 }
 .headerButton:focus {
   outline: none;
   border-color: white;
+  border-width: 2px;
 }
 .headerLogo:focus {
-  outline: 1px solid white;
+  outline: 2px solid white;
   border-radius: 5px;
 }
 .goBackButton::before {
@@ -88,6 +94,21 @@ body {
   background-position: center center;
   background-size: cover;
 }
+
+@media only screen and (max-width: 600px) {
+  .header {
+    height: 9rem;
+  }
+  .headerLogo > img {
+    width: 75px;
+  }
+  .headerButton {
+    padding: 18px;
+    padding-right: 5px;
+    width: 8rem;
+  }
+}
+
 /**************************************** Main Form*/
 .mainForm {
   padding: 0px 110px 75px 130px;
