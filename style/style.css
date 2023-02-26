@@ -19,9 +19,11 @@
   outline: none;
 } */
 
-.wrapper {
+body {
   background-color: var(--background);
-  padding: 0 150px;
+}
+.wrapper {
+  padding: 0 2vw;
 }
 .container {
   max-width: 1140px;
@@ -100,36 +102,34 @@
   color: var(--mainFormText);
   border-bottom: 1px solid var(--mainFormBorder);
 }
+
 .mainHeaderOrder {
   flex: 0 1 69%;
-  padding: 25px 35px 25px 75px;
+  padding: 25px 35px 25px calc(2.5vw + 35px);
   border-right: 1px solid var(--mainFormBorder);
-}
-.mainHeaderOrder {
   display: flex;
 }
 .orderSummary {
   flex: 1 1 75%;
-  padding-right: 10%;
+  padding-right: 5%;
 }
 /**************************************** Order list */
 
 .summary,
 .summary > * {
   font-size: 12px;
-
   display: flex;
   flex-wrap: wrap;
-  gap: 0.7rem 2rem;
+  gap: 0.7rem 1rem;
 }
 
 .summary * {
-  flex-basis: calc((27rem - 100%) * 999);
+  flex-basis: calc((23rem - 100%) * 999); /*27*/
   flex-grow: 1;
 }
 
 .summary > * > * {
-  flex-basis: calc((15rem - 100%) * 999);
+  flex-basis: calc((11rem - 100%) * 999); /*15*/
 }
 
 .summary > div > dt {
@@ -184,7 +184,7 @@
 /*****************************************************Help  */
 .mainHeaderHelp {
   flex: 0 1 31%;
-  padding: 18px 35px 25px 75px;
+  padding: 18px 35px 25px calc(2.5vw + 40px);
 }
 .mainHeaderOrder__title,
 .mainHeaderHelp__title {
@@ -232,6 +232,20 @@
   font-style: normal;
   text-decoration: none;
   padding-right: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .mainHeader {
+    flex-wrap: wrap;
+  }
+  .mainHeaderOrder {
+    border-bottom: 1px solid var(--mainFormBorder);
+    border-right: none;
+    flex-basis: 100%;
+  }
+  .mainHeaderHelp {
+    flex-basis: 100%;
+  }
 }
 
 /*******************************************Slect you want to translate  */
